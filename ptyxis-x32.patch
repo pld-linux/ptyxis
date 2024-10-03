@@ -1,0 +1,11 @@
+--- ptyxis-47.1/agent/meson.build.orig	2024-09-24 21:17:50.000000000 +0200
++++ ptyxis-47.1/agent/meson.build	2024-10-03 21:32:05.011603938 +0200
+@@ -43,7 +43,7 @@ ptyxis_agent_c_args = [
+ ]
+ 
+ libc_compat = true
+-if target_machine.cpu_family() == 'x86_64'
++if target_machine.cpu_family() == 'x86_64' and not (cc.get_define('__ILP32__') == '1')
+   ptyxis_agent_c_args += ['-include', 'x86_64/force_link_glibc_2.17.h']
+ else
+   libc_compat = false

@@ -8,6 +8,7 @@ License:	GPL v3+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/ptyxis/47/%{name}-%{version}.tar.xz
 # Source0-md5:	13b3d2160c35c36b7168285f061e090a
+Patch0:		%{name}-x32.patch
 URL:		https://gitlab.gnome.org/chergert/ptyxis
 BuildRequires:	glib2-devel >= 1:2.80
 BuildRequires:	gtk4-devel >= 4.14
@@ -42,6 +43,7 @@ systemów operacyjnych będących kontenerami.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %meson build
