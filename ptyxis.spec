@@ -13,6 +13,7 @@ BuildRequires:	glib2-devel >= 1:2.80
 BuildRequires:	gtk4-devel >= 4.14
 BuildRequires:	json-glib-devel >= 1.6
 BuildRequires:	libadwaita-devel >= 1.6
+BuildRequires:	libportal-gtk4-devel
 BuildRequires:	meson >= 0.64.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	rpmbuild(macros) >= 1.736
