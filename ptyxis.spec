@@ -2,12 +2,12 @@
 Summary:	Ptyxis - a container oriented terminal
 Summary(pl.UTF-8):	Ptyxis - terminal zorientowany na kontenery
 Name:		ptyxis
-Version:	47.6
+Version:	47.10
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/ptyxis/47/%{name}-%{version}.tar.xz
-# Source0-md5:	0a0fa2628991f10bcbf745d1e7b213a9
+# Source0-md5:	bd06cfb7d24e7cb4833a7d556f76ea4d
 Patch0:		%{name}-x32.patch
 URL:		https://gitlab.gnome.org/chergert/ptyxis
 BuildRequires:	glib2-devel >= 1:2.80
@@ -17,7 +17,7 @@ BuildRequires:	libadwaita-devel >= 1.6
 BuildRequires:	libportal-gtk4-devel
 BuildRequires:	meson >= 0.64.0
 BuildRequires:	ninja >= 1.5
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vte-gtk4-devel >= 0.77
 BuildRequires:	xz
@@ -43,17 +43,17 @@ systemów operacyjnych będących kontenerami.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
-%meson build
+%meson
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %find_lang %{name}
 
