@@ -2,12 +2,12 @@
 Summary:	Ptyxis - a container oriented terminal
 Summary(pl.UTF-8):	Ptyxis - terminal zorientowany na kontenery
 Name:		ptyxis
-Version:	47.13
+Version:	48.1
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/ptyxis/47/%{name}-%{version}.tar.xz
-# Source0-md5:	1486ac844ed4fd35a20343497e79648e
+Source0:	https://download.gnome.org/sources/ptyxis/48/%{name}-%{version}.tar.xz
+# Source0-md5:	6dfc497392bffe1b6bb61d5d87887d5f
 Patch0:		%{name}-x32.patch
 URL:		https://gitlab.gnome.org/chergert/ptyxis
 BuildRequires:	glib2-devel >= 1:2.80
@@ -15,11 +15,11 @@ BuildRequires:	gtk4-devel >= 4.14
 BuildRequires:	json-glib-devel >= 1.6
 BuildRequires:	libadwaita-devel >= 1.6
 BuildRequires:	libportal-gtk4-devel
-BuildRequires:	meson >= 0.64.0
+BuildRequires:	meson >= 1.0.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	vte-gtk4-devel >= 0.77
+BuildRequires:	vte-gtk4-devel >= 0.79
 BuildRequires:	xz
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib2 >= 1:2.80
@@ -29,7 +29,7 @@ Requires:	gtk4 >= 4.14
 Requires:	hicolor-icon-theme
 Requires:	json-glib >= 1.6
 Requires:	libadwaita >= 1.6
-Requires:	vte-gtk4 >= 0.77
+Requires:	vte-gtk4 >= 0.79
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
