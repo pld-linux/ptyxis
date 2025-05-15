@@ -2,12 +2,12 @@
 Summary:	Ptyxis - a container oriented terminal
 Summary(pl.UTF-8):	Ptyxis - terminal zorientowany na kontenery
 Name:		ptyxis
-Version:	48.1
+Version:	48.3
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/ptyxis/48/%{name}-%{version}.tar.xz
-# Source0-md5:	6dfc497392bffe1b6bb61d5d87887d5f
+# Source0-md5:	e67113f0649615bcbaa34e9798c893db
 Patch0:		%{name}-x32.patch
 URL:		https://gitlab.gnome.org/chergert/ptyxis
 BuildRequires:	glib2-devel >= 1:2.80
